@@ -38,7 +38,9 @@ Modifier ici
 <h4 class="modal-title" id="myModalLabel">Supp</h4>
 </div>
 <div class="modal-body">
-Supprimer
+    <h4>Etes vous sur de vouloir supprimer :</h4>
+    <button class="btn btn-info">OUI</button>
+    <button class="btn btn-danger">NON</button>
 </div>
 </div><!-- /.modal-content -->
 </div><!-- /.modal-dialog -->
@@ -96,7 +98,9 @@ Add sanction
 <h4 class="modal-title" id="myModalLabel">SuppSanction</h4>
 </div>
 <div class="modal-body">
-Supprimer Sanction
+<h4>Etes vous sur de vouloir supprimer :</h4>
+    <button class="btn btn-info">OUI</button>
+    <button class="btn btn-danger">NON</button>
 </div>
 </div><!-- /.modal-content -->
 </div><!-- /.modal-dialog -->
