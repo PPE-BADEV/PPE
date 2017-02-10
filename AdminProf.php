@@ -85,7 +85,7 @@
     
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Nom</label>
+    <label for="exampleInputPassword1">Nrtyfgom</label>
     <input type="nom" class="form-control" id="exampleInputPassword1" placeholder="Entrer le nom">
   </div>
  

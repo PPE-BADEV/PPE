@@ -91,7 +91,7 @@
     <input type="nom" class="form-control" id="exampleInputPassword1" placeholder="Entrer le nom">
   </div>
   <div class="form-group">
-    <label for="exampleSelect1">Classes</label>
+    <label for="exampleSelect1">Classesjhggj</label>
     <select class="form-control" id="exampleSelect1">
       <option>    </option>
       <option>1SSI</option>
