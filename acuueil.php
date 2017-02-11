@@ -26,7 +26,6 @@
 </head>
 
 <body>
-    fdghjklmù
 
     <div class="brand">Acceuil</div>
     <div class="address-bar"> Mon compte <span class="glyphicon glyphicon-user"></span>>
@@ -56,16 +55,16 @@
                         <a href="histocolles"><font size=1>Historique des Colles</font><span class="glyphicon glyphicon-thumbs-down"></a>
                     </li>
                     <li>
-                        <a href="AdministrationEleve.php"><font size=1>Administration des Eleves</font><span class="glyphicon glyphicon-education"></a>
+                        <a href="admineleve"><font size=1>Administration des Eleves</font><span class="glyphicon glyphicon-education"></a>
                     </li>
                     <li>
-                        <a href="AdministationClasse.php"><font size=1>Administration des Classes</font><span class="glyphicon glyphicon-duplicate"></a>
+                        <a href="adminclasse"><font size=1>Administration des Classes</font><span class="glyphicon glyphicon-duplicate"></a>
                     </li>
                     <li>
-                        <a href="AdministrationSanction.php"><font size=1>Administration des Critères de Sanctions</font><span class="glyphicon glyphicon-alert"></a>
+                        <a href="adminsanction"><font size=1>Administration des Critères de Sanctions</font><span class="glyphicon glyphicon-alert"></a>
                     </li>
                     <li>
-                        <a href="AdminProf.php"><font size=1>Administration des Professeurs</font><span class="glyphicon glyphicon-king"></a>
+                        <a href="adminprof"><font size=1>Administration des Professeurs</font><span class="glyphicon glyphicon-king"></a>
                     </li>
                     
                 </ul>
