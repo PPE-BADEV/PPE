@@ -10,16 +10,16 @@
                    
                     break;
                 case 'administrationsanction':
-                    include('pages/AdministrationSanction.php');
+                    include('pages/AdminSanction.php');
                     break;
                     
                 break;
                 case 'administrationeleve':
-                    include('pages/AdministrationEleve.php');
+                    include('pages/AdminEleve.php');
                     break;
                  break;
                 case 'administrationclasse':
-                    include('pages/administrationClasse.php');
+                    include('pages/AdminClasse.php');
                     break;
                         
                  break;
