@@ -1,22 +1,50 @@
-
 <form>
     <div class="col-md-2"></div>
     <div class="col-md-4">
     <h2> Administration Prof </h2><br>
-  <label for="exampleSelect1">Choisir Elèves</label>
-    <select class="form-control" id="exampleSelect1">
-      <option>    </option>
-      <option>ici nom des élèves créer dans la base de données</option>
-      </select>
- <label for="exampleSelect1">Liste des profs</label>
-    <select class="form-control" id="exampleSelect1">
-      <option>    </option>
-      <option>Franck RAMEL</option>
-      </select>
  
-  <button type="submit" class="btn btn-primary">Ajouter</button>
+    <table class="table">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Nom</th>
+      <th>Prénom</th>
+      <th>Login</th>
+      <th>Mot de passe</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+  </tbody>
+</table>
+
+   <button type="submit" class="btn btn-primary">Ajouter</button>
   <button type="submit" class="btn btn-primary">Annuler</button>
-  <button type="submit" class="btn btn-primary">Afficher personne crÃ©e </button>
+ 
 </form
 <div class="col-md-2"></div>
 </div>
