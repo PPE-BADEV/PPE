@@ -6,24 +6,24 @@
             switch ($action) {
                 case 'voirlaclasse':
                     //action a effectuer
-                    include('pages/voirlaclasse.php');
+                    include('view/voirlaclasse.php');
                     break;
                 
                 case 'administrationsanction':
-                    include('pages/AdminSanction.php');
+                    include('view/AdminSanction.php');
                     break;
                     
                 case 'administrationeleve':
-                    include('pages/AdminEleve.php');
+                    include('view/AdminEleve.php');
                     break;
              
                 case 'administrationclasse':
-                    include('pages/AdminClasse.php');
+                    include('view/AdminClasse.php');
                     break;
                         
                 case 'administrationprof':
-                    include('pages/AdminProf.php');
+                    include('view/AdminProf.php');
                     break;
             }
         }
-        ?>
+?>
