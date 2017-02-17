@@ -12,7 +12,7 @@
         
 
 
-        <link href="assets/css/bootstrap.css" rel="stylesheet">
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 
 
         <link href="assets/css/business-casual.css" rel="stylesheet">
@@ -51,16 +51,16 @@
                             <a href="histocolles"><font size=1>Historique des Colles</font><span class="glyphicon glyphicon-thumbs-down"></a>
                         </li>
                         <li>
-                            <a href="index.php?controller=classeactuelle&action=administrationeleve"><font size=1>Administration des Eleves</font><span class="glyphicon glyphicon-education"></a>
+                            <a href="index.php?controller=eleve&action=admineleve"><font size=1>Admin Eleves</font><span class="glyphicon glyphicon-education"></a>
                         </li>
                         <li>
-                            <a href="index.php?controller=classeactuelle&action=administrationclasse"><font size=1>Administration des Classes</font><span class="glyphicon glyphicon-duplicate"></a>
+                            <a href="index.php?controller=classe&action=adminclasse"><font size=1>Admin Classes</font><span class="glyphicon glyphicon-duplicate"></a>
                         </li>
                         <li>
-                            <a href="index.php?controller=classeactuelle&action=administrationsanction"><font size=1>Administration des Critères de Sanctions</font><span class="glyphicon glyphicon-alert"></a>
+                            <a href="index.php?controller=sanction&action=adminsanction"><font size=1>Admin Critères Sanctions</font><span class="glyphicon glyphicon-alert"></a>
                         </li>
                         <li>
-                            <a href="index.php?controller=classeactuelle&action=administrationprof"><font size=1>Administration des Professeurs</font><span class="glyphicon glyphicon-king"></a>
+                            <a href="index.php?controller=prof&action=adminprof"><font size=1>Admin Professeurs</font><span class="glyphicon glyphicon-king"></a>
                         </li>
 
                     </ul>
@@ -70,23 +70,45 @@
 
         </nav>
         <body>
-        <?php
-        include 'resources/config.php';
-        require 'resources/helper.php';
-        if (isset($_GET["controller"])) {
+            
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1"></div>
+                   <div class="col-md-10">
+                       
+                        <?php
+                        require('PDO/classePDO.php');
+                        if (isset($_GET["controller"])) 
+                            {
 
-            $controller = $_GET["controller"];
+                            $controller = $_GET["controller"];
 
-            switch ($controller) {
-                case 'classeactuelle':
-                    include('controller/routage.php');
-                    break;
-                
-                    
-            }
-        }else {
-            ?>
-    
+                            switch ($controller) 
+                                {
+                                case 'classeactuelle':
+                                    include('controller/routage.php');
+                                    break;
+                                case 'classe':
+                                    include 'controller/routageClasse.php';
+                                    break;
+                                case 'eleve':
+                                    include 'controller/routageEleve.php';
+                                    break;
+                                case 'prof':
+                                    include 'controller/routageProf.php';
+                                    break;
+                                case 'sanction':
+                                    include 'controller/routageSanction.php';
+                                    break;
+
+
+                                }
+                            }
+                            else 
+                            {
+                            ?>
+                   </div>   
+                <div class="col-md-1"></div> 
     
     
 
@@ -123,6 +145,4 @@
         }
         ?>
 
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js">
- </script>
-<script src="assets/js/bootstrap.js"></script>
+   

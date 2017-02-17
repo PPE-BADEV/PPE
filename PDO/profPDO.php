@@ -7,8 +7,13 @@ function createAdmin($titre,$description){
         $requete = $connection->prepare('INSERT INTO sujet(nom,prenom,login,pwd) VALUES(:nom,:prenom,:login,:pwd)');
         $requete->bindValue(':nom', $nom, PDO::PARAM_STR);
         $requete->bindValue(':prenom', $prenom, PDO::PARAM_STR);
-        $requete->bindValue(':login', $login PDO::PARAM_STR);
-        $requete->bindValue(':pwd', $pwd PDO::PARAM_STR);
+        $requete->bindValue(':login', $login, PDO::PARAM_STR);
+        $requete->bindValue(':pwd', $pwd, PDO::PARAM_STR);
         $requete->execute();
         $connection=null;
+    }
+        catch (PDOException $e)
+        {
+                echo 'Echec lors de la création d une classe : ' . $e->getMessage();
+        }
         }
