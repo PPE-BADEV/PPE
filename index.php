@@ -77,7 +77,7 @@
 
             switch ($controller) {
                 case 'classeactuelle':
-                    include('controller/classeactuelle.php');
+                    include('controller/routage.php');
                     break;
                 
                     

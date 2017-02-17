@@ -1,4 +1,3 @@
-<link href="assets/css/bootstrap.css" rel="stylesheet">
 <center>
     <h2>Administration des criteres de sanction</h2>
 </center>
@@ -122,7 +121,4 @@ Add sanction
 </div>
 </div><!-- /.modal-content -->
 </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->     
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js">
- </script>
- <script src="assets/js/bootstrap.js"></script>
+</div><!-- /.modal -->
