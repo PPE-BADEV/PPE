@@ -71,6 +71,8 @@
         </nav>
         <body>
         <?php
+        include 'resources/config.php';
+        require 'resources/helper.php';
         if (isset($_GET["controller"])) {
 
             $controller = $_GET["controller"];
@@ -121,4 +123,6 @@
         }
         ?>
 
-   
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js">
+ </script>
+<script src="assets/js/bootstrap.js"></script>
