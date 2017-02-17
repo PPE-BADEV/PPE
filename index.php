@@ -9,7 +9,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Business Casual - Start Bootstrap Theme</title>
+        
 
 
         <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -40,8 +40,6 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-
-                    <a class="navbar-brand" href="index.html">Business Casual</a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
