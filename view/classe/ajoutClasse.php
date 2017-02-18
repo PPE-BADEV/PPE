@@ -1,3 +1,11 @@
+<?php
+if(isset($erreur))
+{
+    ?>
+<div class="alert alert-danger" role="alert"><?=$erreur?></div>
+    <?php
+}
+?>
 <form action="index.php?controller=classe&action=createClasse" method="POST">
     
   <div class="form-group">

@@ -24,7 +24,7 @@
                 <button type="button" class="btn btn-warning">Renommer</button>
                 <button type="button" class="btn btn-warning">Consulter</button>
                 <button type="button" class="btn btn-warning">Modifier</button>
-                <button type="button" class="btn btn-warning">Supprimer</button></td>       
+                <a href="index.php?controller=classe&action=delete&id=<?= $uneClasse["id"]?>"><button type="button" class="btn btn-warning">Supprimer</button></a></td>       
                 </tr>
          </tr>
         <?php
@@ -33,5 +33,5 @@
 </table>
 
 <center>
-    <a href="index.php?controller=classe&action=ajoutClasse"><button type="button" class="btn btn-primary">Créer Prof</button></a>
+    <a href="index.php?controller=classe&action=ajoutClasse"><button type="button" class="btn btn-primary">Créer une classe</button></a>
 </center>
