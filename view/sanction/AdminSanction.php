@@ -4,16 +4,35 @@
 <br>
 <table class="table">
     <tr>
+        
+
         <td>Critere de sanction </td>
         <td>Description de la sanction</td>
         <TD>Action</TD>
         <td></td>
     </tr>
     <tr>
-        <td>Bavardage</td>
-        <td>Sanction du coup</td>
+        <?php
+        if ($lesCritSanction==null){
+            echo "pas de de critere";
+        }
+        
+        else
+        {
+        foreach ($lesCritSanction as $unCritSanction) {
+            
+        
+        ?>
+    <tr>
+        <td> <?= $unCritSanction["nom"]?></td>
+        <td><?= $unCritSanction["description"]?></td>
         <td><button class="btn btn-info" data-toggle="modal" data-target="#modif">Modif</button></td>
-        <td><button class="btn btn-danger" data-toggle="modal" data-target="#supp">Supp</button></td>
+        <td><button class="btn btn-danger" data-toggle="modal" data-target="#supp">Supp</button></td>    
+                <?php
+        }
+         }  
+         ?>
+    </tr>
     </tr>
 </table>
 <div class="modal fade" id="modif" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -58,7 +77,25 @@ Modifier ici
 <h4 class="modal-title" id="myModalLabel">Ajouter Sanction</h4>
 </div>
 <div class="modal-body">
-Add sanction
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <form action="index.php?controller=sanction&action=creatSanct" method="post">
+            <div class="form-group">
+              <label for="nomCritSanct">Nom Sanction</label>
+              <input type="text" class="form-control" id="titre" name="nomCritSanct" placeholder="Sanction">
+            </div>
+            <div class="form-group">
+              <label for="Description">Description</label>
+              <textarea class="form-control" rows="3" id="Description" name="Description" placeholder="Description de la sanction"></textarea>
+            </div>
+           
+            
+           <button type="submit" class="btn btn-default">Créer</button>
+        </form>
+        </div>    
+    <div class="col-md-2"></div>    
+</div>    
 </div>
 </div><!-- /.modal-content -->
 </div><!-- /.modal-dialog -->
@@ -73,19 +110,19 @@ Add sanction
         
     </tr>
     <tr>
+        <?php
+        foreach ($lesCritSanction as $unCritSanction){
+            ?>
+        }
         <td>
-            Degradation
+            <?= $unCritSanction["nom"]?>
         </td>
-        <td>degra</td>
+        <td><?= $unCritSanction["description"]?></td>
         <td><bouton class="btn btn-danger" data-toggle="modal" data-target="#suppSan">Supp</bouton></td>
     </tr>
-    <tr>
-        <td>
-            Tricherie
-        </td>
-        <td>axes</td>
-        <td><bouton class="btn btn-danger" data-toggle="modal" data-target="#suppSan">Supp</bouton></td>
-    </tr>
+    <?php
+        }
+        ?>
     
     
 </table>
@@ -106,7 +143,7 @@ Add sanction
 </div><!-- /.modal -->
 <center>
 <button class="btn btn-info" data-toggle="modal" data-target="#AddSanc">
-  Ajouter une sanction
+  Ajouter une colle
 </button>
 </center>
    <div class="modal fade" id="AddSanc" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -117,8 +154,30 @@ Add sanction
 <h4 class="modal-title" id="myModalLabel">Ajouter Colle</h4>
 </div>
 <div class="modal-body">
-Add sanction
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <form action="index.php?controller=sanction&action=creatSanct" method="post">
+            <div class="form-group">
+              <label for="nomCritSanct">Nom Colle</label>
+              <input type="text" class="form-control" id="titre" name="nomCritColle" placeholder="Colle">
+            </div>
+            <div class="form-group">
+              <label for="Description">DescriptionColle</label>
+              <textarea class="form-control" rows="3" id="Description" name="DescriptionColle" placeholder="Description de la Colle"></textarea>
+            </div>
+           
+            
+           <button type="submit" class="btn btn-default">Créer</button>
+        </form>
+        </div>    
+    <div class="col-md-2"></div>    
+</div> 
 </div>
 </div><!-- /.modal-content -->
 </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery-3.1.1.js"></script>

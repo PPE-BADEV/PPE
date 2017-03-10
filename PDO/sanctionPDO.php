@@ -17,7 +17,7 @@ function createCritSanction($nomCritSanct,$Description){
     {
         $connection = new PDO("mysql:host=localhost;dbname=".BD.";charset=utf8", USER_BD, PWD_BD);
         $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $requete = $connection->prepare('INSERT INTO Sanction(nom, description) VALUES(:nom,:description)');
+        $requete = $connection->prepare('INSERT INTO critere(nom, description, type) VALUES(:nom,:description,:type)');
         $requete->bindValue(':nom', $nomCritSanct, PDO::PARAM_STR);
         $requete->bindValue(':description', $Description, PDO::PARAM_STR);
         $requete->execute();
@@ -44,7 +44,7 @@ function getAllCritSanction(){
     {
         $connection = new PDO("mysql:host=localhost;dbname=".BD.";charset=utf8", USER_BD, PWD_BD);
         $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $response=$connection->query('SELECT * FROM sanction');
+        $response=$connection->query('SELECT * FROM critere');
         $lesCritSanction=$response->fetchAll();
         return $lesCritSanction;
         $connection=null;
