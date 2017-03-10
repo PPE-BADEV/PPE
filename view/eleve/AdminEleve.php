@@ -21,9 +21,34 @@
       <option>1BACPROSN</option>
       </select>
   </div>
-  <button type="submit" class="btn btn-primary">Ajouter</button>
-  <button type="submit" class="btn btn-primary">Annuler</button>
-  <button type="submit" class="btn btn-primary">Afficher personne crée </button>
+  <table class="table table-striped">
+	<tr>
+		<td>Nom</td>
+		<td>Prénom</td>
+                
+		<td>modifications</td> 
+            
+            
+       
+	<tr>
+            
+            <?php
+            foreach ($lesEleves as $unEleve){
+            ?>
+        <tr>
+            <td>
+                <?= $unEleve["Nom"]?>
+            </td>
+            <td><?= $unEleve["Prenom"]?></td>
+            <td><a href="routageEleve.php?action=supprimer&id= <?= $unEleve["id"]?>"><button class="btn btn-info">supprimer</button></a>
+            <a href="routageEleve.php?action=create&id= <?= $unEleve["id"]?>"><button class="btn btn-info">modifier</button></a></td>
+        </tr>
+            <?php 
+            }
+            ?>
+            
+        
+</table>
 </form>
 <div class="col-md-2"></div>    
 </div>   
