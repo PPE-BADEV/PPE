@@ -27,7 +27,8 @@
         <td> <?= $unCritSanction["nom"]?></td>
         <td><?= $unCritSanction["description"]?></td>
         <td><button class="btn btn-info" data-toggle="modal" data-target="#modif">Modif</button></td>
-        <td><button class="btn btn-danger" data-toggle="modal" data-target="#supp">Supp</button></td>    
+        <td><button class="btn btn-danger" data-toggle="modal" data-target="#supp">Supp</button></td>
+    </tr>
                 <?php
         }
          }  
@@ -160,11 +161,11 @@ Modifier ici
         <form action="index.php?controller=sanction&action=creatSanct" method="post">
             <div class="form-group">
               <label for="nomCritSanct">Nom Colle</label>
-              <input type="text" class="form-control" id="titre" name="nomCritColle" placeholder="Colle">
+              <input type="text" class="form-control" id="titre" name="nomColle" placeholder="Sanction">
             </div>
             <div class="form-group">
-              <label for="Description">DescriptionColle</label>
-              <textarea class="form-control" rows="3" id="Description" name="DescriptionColle" placeholder="Description de la Colle"></textarea>
+              <label for="Description">Description</label>
+              <textarea class="form-control" rows="3" id="Description" name="DescriptionColle" placeholder="Description de la sanction"></textarea>
             </div>
            
             
@@ -172,7 +173,7 @@ Modifier ici
         </form>
         </div>    
     <div class="col-md-2"></div>    
-</div> 
+</div>
 </div>
 </div><!-- /.modal-content -->
 </div><!-- /.modal-dialog -->

@@ -20,6 +20,7 @@ function createCritSanction($nomCritSanct,$Description){
         $requete = $connection->prepare('INSERT INTO critere(nom, description, type) VALUES(:nom,:description,:type)');
         $requete->bindValue(':nom', $nomCritSanct, PDO::PARAM_STR);
         $requete->bindValue(':description', $Description, PDO::PARAM_STR);
+        $requete->bindValue(':type', 1, PDO::PARAM_STR);
         $requete->execute();
         $connection=null;
         }

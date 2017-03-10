@@ -12,7 +12,7 @@ if (isset($_GET["action"])) {
                 case 'creatSanct':
                     try
                                     {
-                        createCritSanction($_POST["nomCritSanct"], $_POST["Description"],"1");
+                        createCritSanction($_POST["nomCritSanct"], $_POST["Description"]);
                                     }
                                     catch (PDOException $e) {
                                     echo 'Échec lors de la récupération des sujets : ' . $e->getMessage();
