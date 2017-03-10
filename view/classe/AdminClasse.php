@@ -21,7 +21,7 @@
          <tr>
              <td> <?= $uneClasse["nom"] ?> </td>  
                 <td>
-                <button type="button" class="btn btn-warning">Renommer</button>
+                <a href="index.php?controller=classe&action=renommer&id=<?= $uneClasse["id"]?>"<button type="button" class="btn btn-warning">Renommer</button></a>
                 <button type="button" class="btn btn-warning">Consulter</button>
                 <button type="button" class="btn btn-warning">Modifier</button>
                 <a href="index.php?controller=classe&action=delete&id=<?= $uneClasse["id"]?>"><button type="button" class="btn btn-warning">Supprimer</button></a></td>       

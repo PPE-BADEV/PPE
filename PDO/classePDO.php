@@ -68,3 +68,35 @@ function checkclasse($classe)
         echo 'Echec lors de la suppression d un sujet : ' . $e->getMessage();
     }
 }
+
+function renommer($nom , $id)
+{
+    try
+    {
+        $connection = new PDO("mysql:host=localhost;dbname=ppe;charset=utf8", 'root', '');
+        $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $response=$connection->query('UPDATE classe SET nom ="'.$nom.'" WHERE id ='.$id);
+        $connection=null;
+    } 
+    catch (Exception $e) 
+    {
+        echo 'Echec lors de la modification d un sujet : ' . $e->getMessage();
+    }
+}
+
+function readOne($id)
+    {
+        try
+        {
+                $connection = new PDO("mysql:host=localhost;dbname=ppe;charset=utf8", 'root', '');
+                $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                $response=$connection->query('SELECT * FROM classe where id='.$id);
+                $laClasse=$response->fetch();
+                return $laClasse;
+                $connection=null;
+        }
+        catch (PDOException $e) 
+        {
+        echo 'Echec lors de la récupération d une classe : ' . $e->getMessage();
+        }
+    }	

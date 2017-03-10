@@ -128,20 +128,9 @@
                                 <small>
                                     By Badev 
                                 </small>
-
-
                                 </body>
-
                                 </html>
-
-
-    
-    
-    
-    
-         <?php
-           
-            
+        <?php  
         }
         ?>
 

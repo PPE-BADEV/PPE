@@ -34,6 +34,26 @@ if (isset($_GET["action"])) {
                     $lesClasses = readAll();
                     include('view/classe/AdminClasse.php');
                     break;
+                case 'renommer':
+                    $uneClasse = readOne($_GET["id"]);
+                    include 'view/classe/renommerClasse.php';
+                    break;
+                case 'confRenommer':
+                    $classe["nom"]=$_POST["newname"];
+                    $res = checkclasse($classe);
+                    if ($res == 0)
+                    {
+                    renommer($_POST["newname"], $_POST["id"]);
+                    $lesClasses = readAll();
+                    include('view/classe/AdminClasse.php');
+                    }
+                    else
+                    {
+                    $erreur="Une classe ce nomme déjà comme cela";
+                    $uneClasse = readOne($_POST["id"]);
+                    include 'view/classe/renommerClasse.php';   
+                    }
+                    break;
             }
         }
 ?>
