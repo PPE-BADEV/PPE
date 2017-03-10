@@ -78,7 +78,7 @@
                        
                         <?php
                         session_start();
-                        
+                        include('resources/config.php');
                         require('PDO/classePDO.php');
                         require('PDO/elevePDO.php');
                         require('PDO/profPDO.php');
