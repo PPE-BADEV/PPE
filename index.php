@@ -79,14 +79,6 @@
                         <?php
                         session_start();
                         
-                        if (isset($_SESSION["User"])== true)                                                                        
-                        {  
-                            
-                        }
-                        else
-                        {
-                            header("location:connexion.php");
-                        }
                         require('PDO/classePDO.php');
                         require('PDO/elevePDO.php');
                         require('PDO/profPDO.php');

@@ -24,7 +24,7 @@ if (isset($_GET["action"])) {
                     else
                     {
                     $classe["nom"]=$_POST['nom'];
-                    create($classe);
+                    createClasse($classe);
                     $lesClasses = readAll();
                     include('view/classe/AdminClasse.php');
                     }

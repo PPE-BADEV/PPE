@@ -18,7 +18,7 @@ function readAll()
     }		
 
    
-function create($classe)
+function createClasse($classe)
 {
         try
         {
