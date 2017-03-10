@@ -77,9 +77,14 @@
                    <div class="col-md-10">
                        
                         <?php
+                        session_start();
+                        
                         require('PDO/classePDO.php');
                         require('PDO/elevePDO.php');
                         include ('resources/config.php');
+                        require('PDO/profPDO.php');
+                        require('PDO/sanctionPDO.php');
+                        require('PDO/connectionPDO.php');
                         if (isset($_GET["controller"])) 
                             {
 
@@ -102,8 +107,21 @@
                                 case 'sanction':
                                     include 'controller/routageSanction.php';
                                     break;
-
-
+                                case 'checkLogin':
+                                    $prof["login"] = $_POST["login"];
+                                    $prof["pwd"] = sha1($_POST["pwd"]);
+                                    $res = checkLog($prof);
+                                    if ($res==0)
+                                    {
+                                        header('location:connexion.php');
+                                        $erreur = "login/mot de passe éroné";
+                                    }
+                                    else
+                                    {
+                                        $_SESSION["User"]=$_POST["login"];
+                                        header('location:index.php');
+                                    }
+                                    break;
                                 }
                             }
                             else 
@@ -130,20 +148,9 @@
                                 <small>
                                     By Badev 
                                 </small>
-
-
                                 </body>
-
                                 </html>
-
-
-    
-    
-    
-    
-         <?php
-           
-            
+        <?php  
         }
         ?>
 
