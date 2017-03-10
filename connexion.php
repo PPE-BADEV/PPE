@@ -12,7 +12,7 @@ if(isset($erreur))
 }
 ?>
 
-<form action="index.php?controller=checkLogin" style="margin-top:50px" class="form-horizontal" method="POST">
+<form action="index.php?controller=connection&action=checkLogin" style="margin-top:50px" class="form-horizontal" method="POST">
   <div class="form-group">
       <div class="col-sm-5"></div>
       <div class="col-sm-4" >Bienvenue sur le site internet</div> 
