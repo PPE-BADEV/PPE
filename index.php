@@ -24,6 +24,17 @@
 
 
     </head>
+    <?php
+        session_start();
+                if (isset($_SESSION["User"])== true)                                                                        
+                    {  
+                ?>
+                    <div class="form-group">
+                    <a href="index.php?controller=connection&action=logout"><button type="button" class="btn btn-danger">Log out</button></a>
+                    </div>
+                <?php
+                    }
+                ?>
             <div class="brand">Acceuil</div>
         <div class="address-bar"> Mon compte <span class="glyphicon glyphicon-user"></span>>
             | A propos de ... <span class="glyphicon glyphicon-question-sign"></span></div>
@@ -77,8 +88,15 @@
                    <div class="col-md-10">
                        
                         <?php
-                        session_start();
                         
+                        if (isset($_SESSION["User"])== true)                                                                        
+                        {  
+                            
+                        }
+                        else
+                        {
+                            header("location:connexion.php");
+                        }
                         require('PDO/classePDO.php');
                         require('PDO/elevePDO.php');
                         include ('resources/config.php');
@@ -107,20 +125,8 @@
                                 case 'sanction':
                                     include 'controller/routageSanction.php';
                                     break;
-                                case 'checkLogin':
-                                    $prof["login"] = $_POST["login"];
-                                    $prof["pwd"] = sha1($_POST["pwd"]);
-                                    $res = checkLog($prof);
-                                    if ($res==0)
-                                    {
-                                        header('location:connexion.php');
-                                        $erreur = "login/mot de passe éroné";
-                                    }
-                                    else
-                                    {
-                                        $_SESSION["User"]=$_POST["login"];
-                                        header('location:index.php');
-                                    }
+                                case 'connection':
+                                    include 'controller/routageConnection.php';
                                     break;
                                 }
                             }
