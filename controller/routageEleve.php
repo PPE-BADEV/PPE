@@ -5,12 +5,13 @@ if (isset($_GET["action"])) {
 
             switch ($action) {             
                 case 'admineleve':
-                    include('view/eleve/adminEleve.php');
+                    $lesEleves= getAllEleve();
+                    include('view/eleve/AdminEleve.php');
                     break;
-                 case "create":
-                    include ('view/eleve/AdminEleve.php');
+                 case "createEleve":
+                    include ('view/eleve/createEleve.php');
                     break;
-                case "supprimer":
+                case "supprimerEleve":
                     supprimer($_GET["id"]);
                     $lesEleves= getAllEleve();
                     include ('view/eleve/AdminEleve.php');

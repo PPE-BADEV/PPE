@@ -78,6 +78,8 @@
                        
                         <?php
                         require('PDO/classePDO.php');
+                        require('PDO/elevePDO.php');
+                        include ('resources/config.php');
                         if (isset($_GET["controller"])) 
                             {
 

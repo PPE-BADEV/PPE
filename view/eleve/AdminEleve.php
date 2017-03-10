@@ -33,6 +33,12 @@
 	<tr>
             
             <?php
+            if ($lesEleves == null) {
+                echo "pas d'eleves";
+            }
+            else {
+            
+            
             foreach ($lesEleves as $unEleve){
             ?>
         <tr>
@@ -40,15 +46,17 @@
                 <?= $unEleve["Nom"]?>
             </td>
             <td><?= $unEleve["Prenom"]?></td>
-            <td><a href="routageEleve.php?action=supprimer&id= <?= $unEleve["id"]?>"><button class="btn btn-info">supprimer</button></a>
-            <a href="routageEleve.php?action=create&id= <?= $unEleve["id"]?>"><button class="btn btn-info">modifier</button></a></td>
+            <td><a href="routageEleve.php?action=supprimerEleve&id= <?= $unEleve["id"]?>"><button class="btn btn-info">supprimer</button></a>
+            <a href="routageEleve.php?action=createEleve= <?= $unEleve["id"]?>"><button class="btn btn-info">modifier</button></a></td>
         </tr>
             <?php 
             }
             ?>
-            
+            }
         
 </table>
 </form>
 <div class="col-md-2"></div>    
 </div>   
+    <?php
+}
