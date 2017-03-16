@@ -47,7 +47,8 @@
             </td>
             <td><?= $unEleve["Prenom"]?></td>
             <td><a href="routageEleve.php?action=supprimerEleve&id= <?= $unEleve["id"]?>"><button class="btn btn-info">supprimer</button></a>
-            <a href="routageEleve.php?action=createEleve= <?= $unEleve["id"]?>"><button class="btn btn-info">modifier</button></a></td>
+            <a href="routageEleve.php?action=createEleve= <?= $unEleve["id"]?>"><button class="btn btn-info">modifier</button></a>
+            <a href="index.php?action=modifi&id= <?= $unEleve["id"]?>"><button class="btn btn-info">modifier</button></a></td>
         </tr>
             <?php 
             }

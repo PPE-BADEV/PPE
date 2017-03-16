@@ -16,6 +16,20 @@ if (isset($_GET["action"])) {
                     $lesEleves= getAllEleve();
                     include ('view/eleve/AdminEleve.php');
                     break;
+                case "modifi":
+                    $eleve=modifier($_GET["id"]);
+                     include 'public/modifi.php';
+                     break;
+                case "modifier":
+                                    try
+                                {
+                                    change($_GET["id"],$_POST["nom"],$_POST["prenom"]);
+                                }
+                                catch (PDOException $e) {
+                                    echo 'echec lors de la recuperation des eleves:'.$e->getmessage();
+                                }
+                                header('location: index.php?action=AdminEleve');
+                                    break;
             }
         }
 ?>
