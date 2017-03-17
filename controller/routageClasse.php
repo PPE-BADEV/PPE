@@ -19,7 +19,8 @@ if (isset($_GET["action"])) {
                     if ($res==1)
                     {
                     $erreur="Il y a déjà une classe avec ce nom là";
-                    include 'view/classe/ajoutClasse.php';
+                    $lesClasses = readAll();
+                    include 'view/classe/AdminClasse.php';
                     }
                     else
                     {
@@ -50,8 +51,8 @@ if (isset($_GET["action"])) {
                     else
                     {
                     $erreur="Une classe ce nomme déjà comme cela";
-                    $uneClasse = readOne($_POST["id"]);
-                    include 'view/classe/renommerClasse.php';   
+                    $lesClasses = readAll();
+                    include('view/classe/AdminClasse.php');
                     }
                     break;
             }

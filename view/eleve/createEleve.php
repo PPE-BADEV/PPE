@@ -1,17 +1,26 @@
 
 
 <div class="row">
-    <div class="col-md-2"></div>
-    <div class="col-md-8">
-        <form action="index.php?controller=eleve&action=AdminEleve" method="post">
-            <div class="form-group">
-              <label for="nom">Nom</label>
-              <input type="text" class="form-control" id="titre" name="nom" placeholder="nom de l'eleve">
-            </div>
-            <div class="form-group">
-              <label for="prenom">Prénom</label>
-              <textarea class="form-control" rows="3" id="description" name="prenom" placeholder="prenom de l'eleve"></textarea>
-            </div>
+   
+        <form action="index.php?controller=eleve&action=createEleve" method="post">
+              
+      
+    <label for="exampleInputEmail1">Prénom</label>
+    <input type="prénom" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entrer le prénom">
+    
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Nom</label>
+    <input type="nom" class="form-control" id="exampleInputPassword1" placeholder="Entrer le nom">
+  </div>
+  <div class="form-group">
+    <label for="exampleSelect1">Classe</label>
+    <select class="form-control" id="exampleSelect1">
+      <option>    </option>
+      <option>1SSI</option>
+      <option>TSSI</option>
+      <option>1BACPROSN</option>
+      </select>
            <button type="submit" class="btn btn-default">Créer</button>
         </form>
         </div>    

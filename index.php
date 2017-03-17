@@ -14,6 +14,9 @@
 
         <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery-3.1.1.js"></script>
 
         <link href="assets/css/business-casual.css" rel="stylesheet">
 
@@ -24,20 +27,25 @@
 
 
     </head>
+    <<title>PPE</title>
     <?php
         session_start();
+                ?>
+        <div class="brand">Acceuil</div>
+        <div class="address-bar"> 
+            <?php
                 if (isset($_SESSION["User"])== true)                                                                        
-                    {  
-                ?>
-                    <div class="form-group">
-                    <a href="index.php?controller=connection&action=logout"><button type="button" class="btn btn-danger">Log out</button></a>
-                    </div>
-                <?php
-                    }
-                ?>
-            <div class="brand">Acceuil</div>
-        <div class="address-bar"> Mon compte <span class="glyphicon glyphicon-user"></span>>
-            | A propos de ... <span class="glyphicon glyphicon-question-sign"></span></div>
+                {
+            ?>
+                <div class="form-group">
+                <a href="index.php?controller=connection&action=logout"><button type="button" class="btn btn-danger">Se déconnecter</button></a>
+                </div>
+            <?php
+                }
+            ?>
+            Mon compte <span class="glyphicon glyphicon-user"></span>>
+            | A propos de ... <span class="glyphicon glyphicon-question-sign"></span>
+        </div>
 
 
         <nav class="navbar navbar-default" role="navigation">
@@ -154,6 +162,8 @@
                                 <small>
                                     By Badev 
                                 </small>
+                                
+    
                                 </body>
                                 </html>
         <?php  

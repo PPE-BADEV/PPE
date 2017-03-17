@@ -61,6 +61,8 @@
 </div><!-- /.modal-content -->
 </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+
+
 <div class="modal fade" id="supp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 <div class="modal-dialog">
 <div class="modal-content">
@@ -77,11 +79,12 @@
 </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
-    <center>
+<center>
 <button class="btn btn-info" data-toggle="modal" data-target="#myModal">
   Ajouter une sanction
 </button>
 </center>
+
    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 <div class="modal-dialog">
 <div class="modal-content">
@@ -192,6 +195,3 @@
 </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/jquery-3.1.1.js"></script>

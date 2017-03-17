@@ -4,7 +4,7 @@ function readAll()
     {
         try
         {
-                $connection = new PDO("mysql:host=localhost;dbname=ppe;charset=utf8", 'root', '');
+                $connection = new PDO("mysql:host=localhost;dbname=".BD.";charset=utf8", USER_BD, PWD_BD);
                 $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 $response=$connection->query('SELECT * FROM classe ');
                 $lesClasses=$response->fetchAll();
@@ -22,7 +22,7 @@ function createClasse($classe)
 {
         try
         {
-                $connection = new PDO("mysql:host=localhost;dbname=ppe;charset=utf8", 'root', '');
+                $connection = new PDO("mysql:host=localhost;dbname=".BD.";charset=utf8", USER_BD, PWD_BD);
                 $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 $requete = $connection->prepare('INSERT INTO classe(nom) VALUES(:nom)');
                 $requete->bindValue(':nom', $classe["nom"], PDO::PARAM_STR);
@@ -39,7 +39,7 @@ function delete($id)
 {
     try
     {
-        $connection = new PDO("mysql:host=localhost;dbname=ppe;charset=utf8", 'root', '');
+        $connection = new PDO("mysql:host=localhost;dbname=".BD.";charset=utf8", USER_BD, PWD_BD);
         $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $requete=$connection->query('DELETE FROM classe WHERE id='.$id);
         $connection=null;
@@ -54,7 +54,7 @@ function checkclasse($classe)
 {
     try
     {
-        $connection = new PDO("mysql:host=localhost;dbname=ppe;charset=utf8", 'root', '');
+        $connection = new PDO("mysql:host=localhost;dbname=".BD.";charset=utf8", USER_BD, PWD_BD);
         $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $response=$connection->prepare('SELECT count(*) as nb FROM classe WHERE nom = :nom');
         $response->bindValue(':nom', $classe["nom"], PDO::PARAM_STR);
@@ -73,7 +73,7 @@ function renommer($nom , $id)
 {
     try
     {
-        $connection = new PDO("mysql:host=localhost;dbname=ppe;charset=utf8", 'root', '');
+        $connection = new PDO("mysql:host=localhost;dbname=".BD.";charset=utf8", USER_BD, PWD_BD);
         $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $response=$connection->query('UPDATE classe SET nom ="'.$nom.'" WHERE id ='.$id);
         $connection=null;
@@ -88,7 +88,7 @@ function readOne($id)
     {
         try
         {
-                $connection = new PDO("mysql:host=localhost;dbname=ppe;charset=utf8", 'root', '');
+                $connection = new PDO("mysql:host=localhost;dbname=".BD.";charset=utf8", USER_BD, PWD_BD);
                 $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 $response=$connection->query('SELECT * FROM classe where id='.$id);
                 $laClasse=$response->fetch();
