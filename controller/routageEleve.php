@@ -8,9 +8,16 @@ if (isset($_GET["action"])) {
                     $lesEleves= getAllEleve();
                     include('view/eleve/AdminEleve.php');
                     break;
-                 case "createEleve":
+                 case "create":
                     include ('view/eleve/createEleve.php');
                     break;
+                 case "createEleve":
+                     createEleve($eleve);
+                    $lesEleves= getAllEleve();
+                    include ('view/eleve/AdminEleve.php');
+                     
+                    break;
+                
                 case "supprimerEleve":
                     supprimer($_GET["id"]);
                     $lesEleves= getAllEleve();
@@ -18,7 +25,7 @@ if (isset($_GET["action"])) {
                     break;
                 case "modifi":
                     $eleve=modifier($_GET["id"]);
-                     include 'public/modifi.php';
+                     include 'view/eleve/modifiEleve.php';
                      break;
                 case "modifier":
                                     try
