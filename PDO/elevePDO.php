@@ -50,7 +50,7 @@ function supprimerEleve ($id)
                 echo 'Echec lors de la suppression d un eleve : ' . $e->getMessage();
         }
 }
-function modifier($id) {
+function modifierEleve($id) {
     try
     {
     

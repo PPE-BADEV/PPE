@@ -27,7 +27,7 @@ if (isset($_GET["action"])) {
                     $eleve=modifier($_GET["id"]);
                      include 'view/eleve/modifiEleve.php';
                      break;
-                case "modifier":
+                case "modifierEleve":
                                     try
                                 {
                                     change($_GET["id"],$_POST["nom"],$_POST["prenom"]);
