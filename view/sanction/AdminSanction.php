@@ -177,8 +177,8 @@
               <input type="text" class="form-control" id="titre" name="nomCritSanct" placeholder="Sanction">
             </div>
             <div class="form-group">
-              <label for="Description">Description</label>
-              <textarea class="form-control" rows="3" id="Description" name="description" placeholder="Description de la sanction"></textarea>
+              <label for="description">Description</label>
+              <textarea class="form-control" rows="3" id="description" name="description" placeholder="Description de la sanction"></textarea>
             </div>
            
             
