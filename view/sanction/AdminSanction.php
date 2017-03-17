@@ -44,7 +44,19 @@
 <h4 class="modal-title" id="myModalLabel">Modifier</h4>
 </div>
 <div class="modal-body">
-Modifier ici
+<form action="index.php?controller=sanction&action=modifierSanction&id=<?=$unCritSanction["id"]?>" method="post">
+            <div class="form-group">
+              <label for="nomCritSanct">Nom Sanction</label>
+              <input type="text" class="form-control" id="titre" name="nomCritSanct" value="<?=$unCritSanction["nom"]?>">
+            </div>
+            <div class="form-group">
+              <label for="Description">Description</label>
+              <textarea class="form-control" rows="3" id="description" name="description" ><?=$unCritSanction["description"]?></textarea>
+            </div>
+           
+            
+           <button type="submit" class="btn btn-default">Créer</button>
+        </form>
 </div>
 </div><!-- /.modal-content -->
 </div><!-- /.modal-dialog -->
@@ -60,8 +72,8 @@ Modifier ici
 </div>
 <div class="modal-body">
     <h4>Etes vous sur de vouloir supprimer :</h4>
-    <button class="btn btn-info">OUI</button>
-    <button class="btn btn-danger">NON</button>
+    <a href="index.php?controller=sanction&action=del&id=<?=$unCritSanction["id"]?>"<button class="btn btn-info">OUI</button></a>
+    <button class="btn btn-danger" data-dismiss="modal">NON</button>
 </div>
 </div><!-- /.modal-content -->
 </div><!-- /.modal-dialog -->
@@ -91,7 +103,7 @@ Modifier ici
             </div>
             <div class="form-group">
               <label for="Description">Description</label>
-              <textarea class="form-control" rows="3" id="Description" name="Description" placeholder="Description de la sanction"></textarea>
+              <textarea class="form-control" rows="3" id="description" name="description" placeholder="Description de la sanction"></textarea>
             </div>
            
             
@@ -103,7 +115,8 @@ Modifier ici
 </div>
 </div><!-- /.modal-content -->
 </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->     
+</div><!-- /.modal -->   
+
 <br>
 <table class="table"
         <tr>
@@ -115,13 +128,13 @@ Modifier ici
     </tr>
     <tr>
         <?php
-        foreach ($lesCritSanction as $unCritSanction){
+        foreach ($lesCritColle as $unCritColle){
             ?>
         }
         <td>
-            <?= $unCritSanction["nom"]?>
+            <?= $unCritColle["nom"]?>
         </td>
-        <td><?= $unCritSanction["description"]?></td>
+        <td><?= $unCritColle["description"]?></td>
         <td><bouton class="btn btn-danger" data-toggle="modal" data-target="#suppSan">Supp</bouton></td>
     </tr>
     <?php
@@ -139,8 +152,8 @@ Modifier ici
 </div>
 <div class="modal-body">
 <h4>Etes vous sur de vouloir supprimer :</h4>
-    <button class="btn btn-info">OUI</button>
-    <button class="btn btn-danger">NON</button>
+    <a href="index.php?controller=sanction&action=del&id=<?=$unCritColle["id"]?>"<button class="btn btn-info">OUI</button></a>
+    <button class="btn btn-danger" data-dismiss="modal">NON</button>
 </div>
 </div><!-- /.modal-content -->
 </div><!-- /.modal-dialog -->
@@ -161,14 +174,14 @@ Modifier ici
 <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
-        <form action="index.php?controller=sanction&action=creatSanct" method="post">
+        <form action="index.php?controller=sanction&action=creatColle" method="post">
             <div class="form-group">
               <label for="nomCritSanct">Nom Colle</label>
-              <input type="text" class="form-control" id="titre" name="nomColle" placeholder="Sanction">
+              <input type="text" class="form-control" id="titre" name="nomCritSanct" placeholder="Colle">
             </div>
             <div class="form-group">
-              <label for="Description">Description</label>
-              <textarea class="form-control" rows="3" id="Description" name="DescriptionColle" placeholder="Description de la sanction"></textarea>
+              <label for="description">Description</label>
+              <textarea class="form-control" rows="3" id="description" name="description" placeholder="Description de la colle"></textarea>
             </div>
            
             

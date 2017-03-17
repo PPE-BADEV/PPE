@@ -79,7 +79,7 @@
                             <a href="index.php?controller=sanction&action=adminsanction"><font size=1>Admin Critères Sanctions</font><span class="glyphicon glyphicon-alert"></a>
                         </li>
                         <li>
-                            <a href="index.php?controller=prof&action=adminprof"><font size=1>Admin Professeurs</font><span class="glyphicon glyphicon-king"></a>
+                            <a href="index.php?controller=prof&action=AdminProf"><font size=1>Admin Professeurs</font><span class="glyphicon glyphicon-king"></a>
                         </li>
 
                     </ul>

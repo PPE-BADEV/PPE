@@ -9,21 +9,21 @@
                     include('view/voirlaclasse.php');
                     break;
                 
-                case 'administrationsanction':
+                case 'AdminSanction':
                     include('view/AdminSanction.php');
                     break;
                     
-                case 'administrationeleve':
+                case 'AdminEleve':
                     include('view/AdminEleve.php');
                     break;
              
-                case 'administrationclasse':
+                case 'AdminClasse':
                     include('view/AdminClasse.php');
                     break;
-                        
-                case 'administrationprof':
+               
+                case 'AdminProf':
                     include('view/AdminProf.php');
                     break;
-            }
+        }
         }
 ?>
