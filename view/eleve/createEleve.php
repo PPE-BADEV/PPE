@@ -16,7 +16,7 @@
   <div class="form-group">
     <label for="exampleSelect1">Classe</label>
     <select class="form-control" id="exampleSelect1">
-      
+      <option>       </option>
       <option>1SSI</option>
       <option>TSSI</option>
       <option>1BACPROSN</option>
