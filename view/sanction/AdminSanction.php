@@ -174,11 +174,11 @@
         <form action="index.php?controller=sanction&action=creatColle" method="post">
             <div class="form-group">
               <label for="nomCritSanct">Nom Colle</label>
-              <input type="text" class="form-control" id="titre" name="nomCritSanct" placeholder="Sanction">
+              <input type="text" class="form-control" id="titre" name="nomCritSanct" placeholder="Colle">
             </div>
             <div class="form-group">
               <label for="description">Description</label>
-              <textarea class="form-control" rows="3" id="description" name="description" placeholder="Description de la sanction"></textarea>
+              <textarea class="form-control" rows="3" id="description" name="description" placeholder="Description de la colle"></textarea>
             </div>
            
             
