@@ -9,9 +9,11 @@ if (isset($_GET["action"])) {
                     include('view/eleve/AdminEleve.php');
                     break;
                  case "create":
+                    $lesClasses=readAll(); 
                     include ('view/eleve/createEleve.php');
                     break;
                  case "createEleve":
+                     
                      createEleve($eleve);
                     $lesEleves= getAllEleve();
                     include ('view/eleve/AdminEleve.php');
@@ -27,7 +29,7 @@ if (isset($_GET["action"])) {
                     $eleve=modifier($_GET["id"]);
                      include 'view/eleve/modifiEleve.php';
                      break;
-                case "modifierEleve":
+                case "modifier":
                                     try
                                 {
                                     change($_GET["id"],$_POST["nom"],$_POST["prenom"]);
