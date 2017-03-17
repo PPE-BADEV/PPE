@@ -27,6 +27,7 @@
 
 
     </head>
+    <<title>PPE</title>
     <?php
         session_start();
                 ?>
@@ -34,7 +35,7 @@
         <div class="address-bar"> 
             <?php
                 if (isset($_SESSION["User"])== true)                                                                        
-                {  
+                {
             ?>
                 <div class="form-group">
                 <a href="index.php?controller=connection&action=logout"><button type="button" class="btn btn-danger">Se déconnecter</button></a>
