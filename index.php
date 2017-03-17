@@ -43,14 +43,14 @@
             <?php
                 }
             ?>
-            Mon compte <span class="glyphicon glyphicon-user"></span>>
+          Mon compte <span class="glyphicon glyphicon-user"></span>
             | A propos de ... <span class="glyphicon glyphicon-question-sign"></span>
         </div>
 
 
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
-                
+
 
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -94,7 +94,16 @@
             <div class="row">
                 <div class="col-md-1"></div>
                    <div class="col-md-10">
-                       
+    <?php
+        if(isset($erreur))
+        {
+    ?>
+        <div class="alert alert-danger" role="alert"><?=$erreur?></div>
+    <?php
+        }
+    ?>
+                        
+        
                         <?php
                         
                         if (isset($_SESSION["User"])== true)                                                                        
@@ -111,12 +120,10 @@
                         require('PDO/profPDO.php');
                         require('PDO/sanctionPDO.php');
                         require('PDO/connectionPDO.php');
-                        if (isset($_GET["controller"])) 
+                        if (isset($_GET["controller"]))
                             {
-
                             $controller = $_GET["controller"];
-
-                            switch ($controller) 
+                            switch ($controller)
                                 {
                                 case 'classeactuelle':
                                     include('controller/routage.php');

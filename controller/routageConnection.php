@@ -10,8 +10,8 @@ if (isset($_GET["action"])) {
                         $res = checkLog($prof);
                         if ($res==0)
                         {
-                            header('location:connexion.php');
                             $erreur = "login/mot de passe éroné";
+                            header('location:connexion.php');
                         }
                         else
                         {

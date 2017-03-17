@@ -117,7 +117,7 @@
    <div class="form-group">
     <label for="exampleInputPassword1">Id de la classe</label>
 	<input type="text" class="form-control" placeholder="id" name="id"  value="<?= $uneClasse["id"]?>" readonly="true">
-  </div> 
+  </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Nom de la classe</label>
 	<input type="text" class="form-control" placeholder="nom de la classe" name="name"  value="<?= $uneClasse["nom"]?>" readonly="true">
@@ -126,10 +126,10 @@
     <label for="exampleInputPassword1">Nouveau nom de la classe</label>
 	<input type="text" class="form-control" placeholder="nouveau nom de la classe" name="newname">
   </div>
-    
+
   <button type="submit" class="btn btn-default">Submit</button>
 </form>
-	
+
         </div>    
     <div class="col-md-2"></div>    
 </div>    
