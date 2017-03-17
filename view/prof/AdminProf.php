@@ -1,50 +1,58 @@
-<form>
-    <div class="col-md-2"></div>
-    <div class="col-md-4">
-    <h2> Administration Prof </h2><br>
- 
-    <table class="table">
-  <thead>
-    <tr>
-      <th></th>
-      <th>Nom</th>
-      <th>Prénom</th>
-      <th>Login</th>
-      <th>Mot de passe</th>
-      <th>Action</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-  </tbody>
-</table>
-
-   <button type="submit" class="btn btn-primary">Ajouter</button>
- 
-</form
-<div class="col-md-2"></div>
+<div class="row" style="padding-bottom: 20px">
+    <a href="index.php?controller=prof&action=createAdminProf"><button class="btn btn-info">Créer un Prof</button></a></a>
 </div>
+<div class="row">
+    <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="container">   
+ <table class="table table-striped">
+ <thead>
+      <tr>
+        <th>Id</th>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>Login</th>
+        <th>Password</th>
+      </tr>
+    </thead>
+            <?php
+            if ($lesProfs == null){
+                echo "pas de prof";
+            }
+            else
+            {
+            foreach ($lesProfs as $unProf){
+            ?>
     
+      <tr>
+        <td><?= $unProf["id"]?></td>
+        <td><?= $unProf["nom"]?></td>
+        <td><?= $unProf["prenom"]?></td>
+        <td><?= $unProf["login"]?></td>
+        <td><?= $unProf["pwd"]?></td>
+        <td><a href="index.php?controller=prof&action=supprimeProf&id=<?= $unProf["id"]?>">Supprimer</a>   
+        <a href="index.php?controller=prof&action=modifierProf&id=<?= $unProf["id"]?>">Modifier</a></td>
+      </tr>
+     
+                
+
+                
+</div>       
+            <?php 
+            }
+            
+            }
+            ?>
+  </table>
+            </div>    
+        </div>
+        <div class="col-md-2"></div>    
+    </div> 
+</div>
+
+
+
+
+
+
+
