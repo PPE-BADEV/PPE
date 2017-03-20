@@ -25,7 +25,7 @@ function checkStatut($prof)
     {
         $connection = new PDO("mysql:host=localhost;dbname=".BD.";charset=utf8",USER_BD,PWD_BD);
         $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $response=$connection->prepare('SELECT is_admin FROM prof WHERE login= :login AND pwd= :pwd');
+        $response=$connection->prepare('SELECT is_admin as statut FROM prof WHERE login= :login AND pwd= :pwd');
         $response->bindValue(':login', $prof["login"], PDO::PARAM_STR);
         $response->bindValue(':pwd', $prof["pwd"], PDO::PARAM_STR); 
         $response->execute();

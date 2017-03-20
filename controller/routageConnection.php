@@ -8,6 +8,7 @@ if (isset($_GET["action"])) {
                         $prof["login"] = $_POST["login"];
                         $prof["pwd"] = sha1($_POST["pwd"]);
                         $res = checkLog($prof);
+                        $statut =checkStatut($prof);
                         if ($res==0)
                         {
                             $erreur = "login/mot de passe éroné";
@@ -15,6 +16,7 @@ if (isset($_GET["action"])) {
                         }
                         else
                         {
+                            $_SESSION["Statut"]= $statut;
                             $_SESSION["User"]=$_POST["login"];
                             header('location:index.php');
                         }

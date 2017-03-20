@@ -31,7 +31,7 @@
     <?php
         session_start();
                 ?>
-        <div class="brand">Acceuil</div>
+        <div class="brand">Accueil</div>
         <div class="address-bar"> 
             <?php
                 if (isset($_SESSION["User"])== true)                                                                        
@@ -98,11 +98,11 @@
         if(isset($erreur))
         {
     ?>
-        <div class="alert alert-danger" role="alert"><?=$erreur?></div>
+        <div class="alert alert-danger" role="alert"><?= $erreur ?></div>
     <?php
         }
     ?>
-                        
+                       
         
                         <?php
                         
@@ -112,6 +112,7 @@
                         }
                         else
                         {
+                            $erreur = "Mot de passe / login incorrect!";
                             header("location:connexion.php");
                         }
                         require('PDO/classePDO.php');
@@ -135,7 +136,15 @@
                                     include 'controller/routageEleve.php';
                                     break;
                                 case 'prof':
-                                    include 'controller/routageProf.php';
+                                    if ($_SESSION["Statut"]==1)
+                                    {
+                                    include 'controller/routageProf.php';                                        
+                                    }
+                                    else
+                                    {
+                                        $erreur = "Vous n'êtes pas admin";
+                                        header("location:index.php");
+                                    }
                                     break;
                                 case 'sanction':
                                     include 'controller/routageSanction.php';
