@@ -15,7 +15,7 @@ if (isset($_GET["action"])) {
                     break;
                  case "createEleve":
                     $lesEleves= getAllEleve();                     
-                     createEleve($_POST["nom"], $_POST["prenom"]);
+                     createEleve($_POST["nom"], $_POST["prenom"],$_POST["classe"]);
                     include ('view/eleve/AdminEleve.php');
                      
                     break;
