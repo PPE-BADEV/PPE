@@ -1,6 +1,6 @@
 <?php
 
-function readAll()
+function readAllClasse()
     {
         try
         {
@@ -35,7 +35,7 @@ function createClasse($classe)
         }
 }
 
-function delete($id)
+function deleteClasse($id)
 {
     try
     {
@@ -50,7 +50,7 @@ function delete($id)
     }
 } 
 
-function checkclasse($classe)
+function checkClasse($classe)
 {
     try
     {
@@ -69,7 +69,7 @@ function checkclasse($classe)
     }
 }
 
-function renommer($nom , $id)
+function renameClasse($nom , $id)
 {
     try
     {
@@ -84,7 +84,7 @@ function renommer($nom , $id)
     }
 }
 
-function readOne($id)
+function readOneClasse($id)
     {
         try
         {
