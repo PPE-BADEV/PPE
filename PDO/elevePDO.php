@@ -17,13 +17,13 @@ function getAllEleve()
 }      
         
         
-function createEleve($eleve)
+function createEleve($nom, $prenom)
 {
         try
         {
                 $connection = new PDO("mysql:host=localhost;dbname=".BD.";charset=utf8", USER_BD, PWD_BD);
                 $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                $requete = $connection->prepare('INSERT INTO eleve(nom) VALUES(:nom), eleve(prenom) VALUES(:prenom)');
+                $requete = $connection->prepare('INSERT INTO eleve(nom, prenom) VALUES(:nom,:prenom)');
                 $requete->bindValue(':nom', $nom, PDO::PARAM_STR);
                 $requete->bindValue(':prenom', $prenom, PDO::PARAM_STR);
                 $requete->execute();

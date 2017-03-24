@@ -10,12 +10,12 @@ if (isset($_GET["action"])) {
                     break;
                  case "create":
                     $lesClasses=readAll(); 
+                     
                     include ('view/eleve/createEleve.php');
                     break;
                  case "createEleve":
-                     
-                     createEleve($eleve);
-                    $lesEleves= getAllEleve();
+                    $lesEleves= getAllEleve();                     
+                     createEleve($_POST["nom"], $_POST["prenom"]);
                     include ('view/eleve/AdminEleve.php');
                      
                     break;
