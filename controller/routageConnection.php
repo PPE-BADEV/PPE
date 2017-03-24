@@ -18,6 +18,7 @@ if (isset($_GET["action"])) {
                         {
                             $_SESSION["Statut"]= $statut;
                             $_SESSION["User"]=$_POST["login"];
+                            $_SESSION["Name"]=$_POST["pwd"];
                             header('location:index.php');
                         }
                         break;

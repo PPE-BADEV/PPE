@@ -19,7 +19,7 @@
         <script src="assets/js/jquery-3.1.1.js"></script>
 
         <link href="assets/css/business-casual.css" rel="stylesheet">
-
+        <link href="assets/css/justified-nav.css" rel="stylesheet">   
 
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
@@ -28,69 +28,72 @@
 
     </head>
     <<title>PPE</title>
+    
     <?php
         session_start();
-                ?>
-        <div class="brand">Accueil</div>
-        <div class="address-bar"> 
+    ?>
+ 
+        <div class="address-bar" >
             <?php
                 if (isset($_SESSION["User"])== true)                                                                        
                 {
-            ?>
-                <div class="form-group">
-                <a href="index.php?controller=connection&action=logout"><button type="button" class="btn btn-danger">Se déconnecter</button></a>
+            ?>   
+            <div class="row">
+                <div class="col-md-5"></div> 
+                <div class="col-md-2"></div>  
+                <div class="col-md-3">
+                    <font size="1">Bonjour <?= $_SESSION["User"] ?> <?= $_SESSION["Name"] ?> </font> 
+                    <a href="index.php?controller=connection&action=logout"><span class="glyphicon glyphicon-off"></span></a>
                 </div>
+            </div>
             <?php
                 }
             ?>
-          Mon compte <span class="glyphicon glyphicon-user"></span>
-            | A propos de ... <span class="glyphicon glyphicon-question-sign"></span>
-        </div>
-
-
-        <nav class="navbar navbar-default" role="navigation">
-            <div class="container">
-
-
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+            <div class="row">
+                <div class="col-md-5"></div> 
+                <div class="col-md-2">
+                    <div class="address-bar">
+                        <a href="index.php"><button type="button" class="btn btn-success">Accueil</button></a>
+                    </div>
+                </div>  
+                <div class="col-md-3"></div>  
+                <div class="col-md-3">
+            <font size="1">Mon compte </font><span class="glyphicon glyphicon-user"></span>
+            <font size="1">| A propos de ... </font><span class="glyphicon glyphicon-question-sign"></span>
                 </div>
-
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li>
-                            <a href="index.php?controller=classeactuelle&action=voirlaclasse"><font size=1>Classe Actuelle</font><span class="glyphicon glyphicon-briefcase"></a>
-                        </li>
-                        <li>
-                            <a href="histocolles"><font size=1>Historique des Colles</font><span class="glyphicon glyphicon-thumbs-down"></a>
-                        </li>
-                        <li>
-                            <a href="index.php?controller=eleve&action=admineleve"><font size=1>Admin Eleves</font><span class="glyphicon glyphicon-education"></a>
-                        </li>
-                        <li>
-                            <a href="index.php?controller=classe&action=adminclasse"><font size=1>Admin Classes</font><span class="glyphicon glyphicon-duplicate"></a>
-                        </li>
-                        <li>
-                            <a href="index.php?controller=sanction&action=adminsanction"><font size=1>Admin Critères Sanctions</font><span class="glyphicon glyphicon-alert"></a>
-                        </li>
-                        <li>
-                            <a href="index.php?controller=prof&action=AdminProf"><font size=1>Admin Professeurs</font><span class="glyphicon glyphicon-king"></a>
-                        </li>
-
-                    </ul>
-                </div>
-
             </div>
 
+<div class="container">
+            
+    <div class="masthead">
+        <nav>
+            <ul class="nav nav-justified">
+                <li>
+                    <a href="index.php?controller=classeactuelle&action=voirlaclasse"><font size=1>Classe Actuelle </font><span class="glyphicon glyphicon-briefcase"></a>
+                </li>
+                <li>
+                    <a href="histocolles"><font size=1>Historique des Colles </font><span class="glyphicon glyphicon-thumbs-down"></a>
+                </li>
+                <li>
+                    <a href="index.php?controller=eleve&action=admineleve"><font size=1>Admin Eleves </font><span class="glyphicon glyphicon-education"></a>
+                </li>
+                <li>
+                    <a href="index.php?controller=classe&action=adminclasse"><font size=1>Admin Classes </font><span class="glyphicon glyphicon-duplicate"></a>
+                </li>
+                <li>
+                    <a href="index.php?controller=sanction&action=adminsanction"><font size=1>Admin Sanctions </font><span class="glyphicon glyphicon-alert"></a>
+                </li>
+                <li>
+                    <a href="index.php?controller=prof&action=AdminProf"><font size=1>Admin Professeurs </font><span class="glyphicon glyphicon-king"></a>
+                </li>
+            </ul>
         </nav>
+    </div>
+</div>
+        
         <body>
             
-        <div class="container">
+            <div class="container" style= "margin-top:40px">
             <div class="row">
                 <div class="col-md-1"></div>
                    <div class="col-md-10">
